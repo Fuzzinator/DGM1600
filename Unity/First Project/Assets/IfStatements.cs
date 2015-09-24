@@ -3,16 +3,16 @@ using System.Collections;
 
 public class IfStatements : MonoBehaviour
 {
-	float ovenTemp = 600f;
-	float maxHotTemp = 420f;
-	float minColdTemp = 350f;
+	public float ovenTemp = 600f;
+	public float maxHotTemp = 420f;
+	public float minColdTemp = 350f;
 	
 	void Update ()
 	{
 		if(Input.GetKeyDown(KeyCode.Return))
 			TempCheck();
 		
-		ovenTemp -= Time.deltaTime / 2f;
+		ovenTemp -= Time.deltaTime * 2f;
 	}
 	
 	
@@ -23,6 +23,7 @@ public class IfStatements : MonoBehaviour
 		{
 			// ... do this.
 			print("The oven is too hot.");
+	
 		}
 		// If it isn't, but the temperature of the oven is less than the coldest oven...
 		else if(ovenTemp < minColdTemp)
