@@ -9,9 +9,9 @@ public class Enumerations : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		Direction = myDirection;
+		Direction myDirection;
 
-		myDirection = Direction.North
+		myDirection = Direction.North;
 	}
 
 	Direction DirHeading (Direction dir){
